@@ -3,12 +3,7 @@ $nftid = $_GET['id'];
 
 $dbh = new PDO('mysql:host=localhost;dbname=lbs4nft', 'nftsystem', '');
 
-
-// $result = $dbh->query("SELECT * FROM nfts WHERE id = $nftid");
-
-$statement = $pdo->prepare("SELECT * FROM users WHERE username = :nftid");
-$result = $statement->execute(array('nftid' => $nftid));
-
+$result = $dbh->query("SELECT * FROM nfts WHERE id = $nftid");
 while ($row = $result->fetch()) {
     $title = $row['title'];
     $author = $row['author'];
