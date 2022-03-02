@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=lbs4nft', 'nftsystem', 'ckUZs&JRk?BEnc4RTgCv');
+$pdo = new PDO('mysql:host=localhost;dbname=lbs4nft', 'nftsystem', '');
  
 if(isset($_GET['login'])) {
     $username = $_POST['username'];
